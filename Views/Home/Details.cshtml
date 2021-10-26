@@ -1,0 +1,32 @@
+﻿@model Proyecto_Empleado.Models.Empleado
+@{
+    ViewData["Title"] = "Crear nuevo Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Registro de Empleados</h1>
+
+<hr />
+<div class="row">
+    <div class="col-12">
+        <div class="card border">
+            <div class="card-header">
+                <h3><strong>Detalle de empleado</strong></h3>
+            </div>
+        </div>
+        <div class="card-body">
+
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Nombres: </strong>@Html.DisplayFor(m => m.Nombres)</li>
+                <li class="list-group-item"><strong>Apellidos: </strong>@Html.DisplayFor(m => m.Apellidos)</li>
+                <li class="list-group-item"><strong>Tipo de documento: </strong>@Html.DisplayFor(m => m.TipoDocumento)</li>
+                <li class="list-group-item"><strong>Documento: </strong>@Html.DisplayFor(m => m.Documento)</li>
+                <li class="list-group-item"><strong>Área: </strong>@Html.DisplayFor(m => m.Area)</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Volver a lista</a>
+</div>

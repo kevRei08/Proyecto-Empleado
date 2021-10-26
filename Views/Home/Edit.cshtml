@@ -1,0 +1,55 @@
+﻿@model Proyecto_Empleado.Models.Empleado
+@{
+    ViewData["Title"] = "Crear nuevo Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Registro de Empleados</h1>
+
+<hr />
+<div class="row">
+    <div class="col-12">
+        <div class="card border">
+            <div class="card-header">
+                <h3><strong>Editar empleado</strong></h3>
+            </div>
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit">
+                <input type="hidden" value="Id" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Nombres" class="control-label"></label>
+                    <input asp-for="Nombres" class="form-control" />
+                    <span asp-validation-for="Nombres" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Apellidos" class="control-label"></label>
+                    <input asp-for="Apellidos" class="form-control" />
+                    <span asp-validation-for="Apellidos" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TipoDocumento" class="control-label"></label>
+                    <input asp-for="TipoDocumento" class="form-control" />
+                    <span asp-validation-for="TipoDocumento" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Documento" class="control-label"></label>
+                    <input asp-for="Documento" class="form-control" />
+                    <span asp-validation-for="Documento" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Area" class="control-label"></label>
+                    <input asp-for="Area" class="form-control" />
+                    <span asp-validation-for="Area" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success"><i class="fas fa-user"></i> Editar Empleado</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Volver a lista</a>
+</div>
